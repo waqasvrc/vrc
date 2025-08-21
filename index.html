@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRC Internal Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="https://files.constantcontact.com/c3be764f901/1d50fd80-b920-46ac-a8be-16f16dd1d743.jpg" alt="VRC Logo" class="h-12 mr-4" onerror="this.onerror=null;this.src='https://placehold.co/100x100/CCCCCC/000000?text=Logo';">
+                <h1 class="text-2xl font-bold text-[#002D9C]">Internal Portal</h1>
+            </div>
+            <div>
+                <span class="text-gray-600">Welcome, [User Name]</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <h2 class="text-3xl font-bold mb-6 text-gray-700">Quick Access</h2>
+        
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+            <!-- Card 1: Daily Race Schedule -->
+            <a href="#" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-alt text-3xl text-[#3CB371] mr-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Daily Race Schedule</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">View today's official race card, timings, and entries.</p>
+                </div>
+            </a>
+
+            <!-- Card 2: Steward's Reports -->
+            <a href="#" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-gavel text-3xl text-[#002D9C] mr-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Steward's Reports</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Access and review official rulings and reports.</p>
+                </div>
+            </a>
+
+            <!-- Card 3: Licensing Portal -->
+            <a href="#" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-id-card text-3xl text-[#3CB371] mr-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Licensing Portal</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Manage applications, renewals, and status checks.</p>
+                </div>
+            </a>
+
+            <!-- Card 4: Internal Memos -->
+            <a href="#" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-bullhorn text-3xl text-[#002D9C] mr-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Announcements</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Read the latest internal news and commission updates.</p>
+                </div>
+            </a>
+
+            <!-- Card 5: Contact Directory -->
+            <a href="#" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-address-book text-3xl text-[#3CB371] mr-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Staff Directory</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Find contact information for VRC personnel.</p>
+                </div>
+            </a>
+
+            <!-- Card 6: IT Support -->
+            <a href="#" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-headset text-3xl text-[#002D9C] mr-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">IT Support</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Submit a help desk ticket or find tech resources.</p>
+                </div>
+            </a>
+
+            <!-- Card 7: Regulations & Forms -->
+            <a href="#" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-file-alt text-3xl text-[#3CB371] mr-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Regulations & Forms</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Download official documents and internal forms.</p>
+                </div>
+            </a>
+            
+            <!-- Card 8: Meeting Agendas -->
+            <a href="#" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-users text-3xl text-[#002D9C] mr-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Meeting Agendas</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">View upcoming commission meeting schedules and agendas.</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-8">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <p>&copy; <span id="copyright-year"></span> Virginia Racing Commission | Internal Use Only</p>
+        </div>
+    </footer>
+    <script>
+        // Set current year in footer
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
