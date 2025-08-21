@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRC Steward & Judge Operational Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for flowchart */
+        .flowchart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flowchart-step {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            position: relative;
+        }
+        .flowchart-arrow {
+            width: 2px;
+            height: 2rem;
+            background-color: #d1d5db;
+            margin: -1.5rem 0;
+        }
+        .flowchart-step h3 {
+            color: #003366;
+        }
+        .mckinsey-blue { color: #005f9e; }
+        .mckinsey-gray { color: #4a4a4a; }
+        .mckinsey-bg-light { background-color: #f3f4f6; }
+        .mckinsey-border { border-color: #005f9e; }
+    </style>
+</head>
+<body class="mckinsey-bg-light text-mckinsey-gray">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8">
+        <!-- Header -->
+        <header class="bg-white p-6 rounded-lg shadow-md mb-8 border-l-8 mckinsey-border">
+            <h1 class="text-3xl md:text-4xl font-bold mckinsey-blue">Virginia Racing Commission</h1>
+            <p class="text-xl text-gray-600 mt-1">Operational Guide for Stewards & Judges</p>
+            <p class="text-sm text-gray-500 mt-2">Ensuring Integrity, Fairness, and Safety in Virginia Horse Racing</p>
+        </header>
+
+        <!-- Section: Responsibilities of VRC Stewards and Judges -->
+        <section id="responsibilities" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold mckinsey-blue border-b pb-2 mb-6">Core Responsibilities of VRC Stewards & Judges</h2>
+            <p class="mb-6">The Stewards are central to the daily operation and oversight of horse racing, possessing broad authority to supervise, control, and regulate all aspects of racing and satellite facilities. Their duties are multifaceted, ensuring compliance and fairness across the board.</p>
+
+            <!-- Responsibilities Diagram -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 text-center">
+                <div class="p-4 border rounded-lg shadow-sm">
+                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <h3 class="font-semibold text-lg mckinsey-blue">Supervision & Authority</h3>
+                    <p class="text-sm">Oversight of race meetings, facilities, and compliance review.</p>
+                </div>
+                <div class="p-4 border rounded-lg shadow-sm">
+                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <h3 class="font-semibold text-lg mckinsey-blue">Enforcement & Discipline</h3>
+                    <p class="text-sm">Dispute resolution, investigations, and imposing penalties.</p>
+                </div>
+                <div class="p-4 border rounded-lg shadow-sm">
+                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <h3 class="font-semibold text-lg mckinsey-blue">Hearings & Applications</h3>
+                    <p class="text-sm">Conducting hearings, reviewing permits, and administering exams.</p>
+                </div>
+                 <div class="p-4 border rounded-lg shadow-sm">
+                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5m-2.1-19.5l-3.9 19.5m16.5-19.5l-3.9 19.5m-2.1-19.5l-3.9 19.5" /></svg>
+                    <h3 class="font-semibold text-lg mckinsey-blue">Horse & Race Management</h3>
+                    <p class="text-sm">Managing Stewards' List, eligibility, and race procedures.</p>
+                </div>
+                 <div class="p-4 border rounded-lg shadow-sm">
+                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
+                    <h3 class="font-semibold text-lg mckinsey-blue">Medical & Testing</h3>
+                    <p class="text-sm">Overseeing veterinarians, medication violations, and sample collection.</p>
+                </div>
+                 <div class="p-4 border rounded-lg shadow-sm">
+                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    <h3 class="font-semibold text-lg mckinsey-blue">Financial & Wagering</h3>
+                    <p class="text-sm">Authorizing purse payments and overseeing wagering pools and claims.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Standard Operating Procedure -->
+        <section id="sop" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold mckinsey-blue border-b pb-2 mb-6">Standard Operating Procedure: Rule Violation & Hearing Process</h2>
+            <p class="mb-8">This SOP outlines the structured process for VRC Officials from the initial observation of a rule violation through to the final disciplinary action, ensuring due process and regulatory adherence.</p>
+            
+            <!-- Flowchart -->
+            <div class="flowchart-container">
+                <div class="flowchart-step">
+                    <h3 class="text-lg font-semibold mb-2">1. Initial Observation & Investigation</h3>
+                    <p class="text-sm">Violation observed by officials, reported, or triggered by specific events (e.g., race conduct, positive test). Information is gathered, and assistance may be requested.</p>
+                </div>
+                <div class="flowchart-arrow"></div>
+                <div class="flowchart-step">
+                    <h3 class="text-lg font-semibold mb-2">2. Decision & Notification</h3>
+                    <p class="text-sm">Officials decide to initiate proceedings. In emergencies, a Summary Suspension may be issued. For formal hearings, written notice of charges and rights is provided to the permit holder.</p>
+                </div>
+                <div class="flowchart-arrow"></div>
+                <div class="flowchart-step">
+                    <h3 class="text-lg font-semibold mb-2">3. Hearing Conduct</h3>
+                    <p class="text-sm">The Senior Commonwealth Steward presides. Witnesses are sworn in, and the permit holder has the right to counsel, present a defense, and cross-examine witnesses. Proceedings are recorded.</p>
+                </div>
+                <div class="flowchart-arrow"></div>
+                <div class="flowchart-step">
+                    <h3 class="text-lg font-semibold mb-2">4. Post-Hearing Decision & Action</h3>
+                    <p class="text-sm">Officials determine if a violation occurred. Disciplinary actions (e.g., reprimand, fine, suspension) are determined and issued via a formal written order.</p>
+                </div>
+                <div class="flowchart-arrow"></div>
+                <div class="flowchart-step">
+                    <h3 class="text-lg font-semibold mb-2">5. Reporting & Appeals</h3>
+                    <p class="text-sm">A daily report is filed with the Commission. The disciplined party has the right to request a review of the decision by the Commission within a specified timeframe.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Detailed Duties & SOPs (Collapsible) -->
+        <section id="details" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold mckinsey-blue border-b pb-2 mb-6">Detailed Reference Materials</h2>
+            <div x-data="{ open: null }">
+                <!-- Collapsible for Detailed Responsibilities -->
+                <div class="border rounded-md mb-4">
+                    <button @click="open = open === 1 ? null : 1" class="w-full text-left p-4 font-semibold text-lg mckinsey-blue flex justify-between items-center">
+                        <span>Detailed Responsibilities of VRC Stewards and Judges</span>
+                        <svg class="w-6 h-6 transform transition-transform" :class="{'rotate-180': open === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div x-show="open === 1" x-cloak class="p-4 border-t text-sm space-y-4">
+                        <div>
+                            <h4 class="font-bold mb-2">I. General Authority and Supervision:</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Overall Oversight:</strong> Exercise immediate supervision, control, and regulation of horse racing.</li>
+                                <li><strong>Compliance Review:</strong> Review conduct of all personnel and patrons for compliance.</li>
+                                <li><strong>Interpretation of Regulations:</strong> Interpret regulations and decide on unspecified racing questions.</li>
+                                <li><strong>Presence at Meetings:</strong> Be present 90 minutes before the first race until 15 minutes after the last is "official."</li>
+                                <li><strong>Facility Inspections:</strong> Conduct periodic inspections of enclosures.</li>
+                                <li><strong>Reporting:</strong> File daily written reports and a summary report at the end of the meeting.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">II. Rule Enforcement and Disciplinary Action:</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Dispute Resolution:</strong> Determine all disputes, protests, and objections.</li>
+                                <li><strong>Investigation Initiation:</strong> Initiate investigations into possible violations.</li>
+                                <li><strong>Imposing Penalties:</strong> Take disciplinary action including fines, suspensions, and revocations.</li>
+                                <li><strong>Summary Suspension:</strong> Can summarily suspend a permit for up to 90 days in emergencies.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">III. Hearings and Applications:</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Conducting Hearings:</strong> Conduct hearings on all racing matters.</li>
+                                <li><strong>Subpoena Power:</strong> Issue subpoenas to compel witness attendance and production of records.</li>
+                                <li><strong>Permit Applications:</strong> Review, grant, or deny permits.</li>
+                                <li><strong>Examinations:</strong> Administer qualification exams for trainers, jockeys, etc.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">IV. Horse and Race Management:</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Stewards' List:</strong> Maintain a list of ineligible horses.</li>
+                                <li><strong>Horse Identification & Eligibility:</strong> Determine horse identity and race eligibility.</li>
+                                <li><strong>Entry and Post Position:</strong> Supervise entries and post position draws.</li>
+                                <li><strong>Race Conditions:</strong> Approve and manage race conditions and declarations.</li>
+                                <li><strong>Paddock & Starting Procedures:</strong> Oversee all procedures from paddock to fair start.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">V. Medical and Testing Oversight:</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Veterinarian Authority:</strong> Oversee veterinarians practicing under the Commission.</li>
+                                <li><strong>Medication Violations:</strong> Apply RCI guidelines and penalties for medication violations.</li>
+                                <li><strong>Test Sample Collection:</strong> Order the taking of test samples from any horse.</li>
+                                <li><strong>Human Drug Testing:</strong> Direct human drug and alcohol testing based on reasonable suspicion.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">VI. Financial and Wagering Oversight:</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Purse Payments:</strong> Authorize payment of purse money.</li>
+                                <li><strong>Claims:</strong> Supervise the determination of title for claimed horses.</li>
+                                <li><strong>Wagering Pools:</strong> Approve policies and changes to wagering pools.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collapsible for Detailed SOP -->
+                <div class="border rounded-md mb-4">
+                    <button @click="open = open === 2 ? null : 2" class="w-full text-left p-4 font-semibold text-lg mckinsey-blue flex justify-between items-center">
+                        <span>Detailed Standard Operating Procedure</span>
+                        <svg class="w-6 h-6 transform transition-transform" :class="{'rotate-180': open === 2}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div x-show="open === 2" x-cloak class="p-4 border-t text-sm space-y-4">
+                        <div>
+                            <h4 class="font-bold mb-2">I. Initial Observation and Investigation (Pre-Hearing)</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Observation of Violation:</strong> VRC Officials have immediate supervision and may initiate investigations based on their own observations.</li>
+                                <li><strong>Specific Triggers for Investigation:</strong> Includes horse performance, identification issues, injuries, fair start problems, improper race conduct, weight discrepancies, permit holder misconduct, substance testing issues, claiming violations, and wagering irregularities.</li>
+                                <li><strong>Gathering Information:</strong> Officials may request assistance, issue subpoenas, and require veterinarian reports or chemist statements.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">II. Decision to Conduct a Hearing & Notification</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Initiating Proceedings:</strong> Officials can institute proceedings based on their observations.</li>
+                                <li><strong>Summary Suspension (Emergency Action):</strong> A permit can be suspended for up to 90 days if emergency action is required, with a hearing scheduled within 14 business days.</li>
+                                <li><strong>Formal Hearing Notification:</strong> Written notice of charges, basis, possible penalties, and rights (to counsel, present a defense, cross-examine) must be given to the permit holder.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">III. Conducting the Hearing</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Presiding Officer:</strong> The Senior Commonwealth VRC Official presides.</li>
+                                <li><strong>Procedural Rights:</strong> Oaths are administered, witnesses can be examined, the permit holder has defense rights, continuances can be granted, and proceedings are recorded.</li>
+                                <li><strong>Addressing Objections and Protests:</strong> Officials hear all objections and protests, which must be filed according to specific procedures. Purse money is retained until a final determination.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">IV. Post-Hearing: Decision and Disciplinary Action</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Determination of Violations:</strong> Officials review all evidence to determine if a violation occurred.</li>
+                                <li><strong>Disciplinary Actions:</strong> Penalties can include reprimand, fine, forfeiture of purse, probation, suspension, revocation, or exclusion. Specific penalties exist for certain violations (e.g., furosemide, human drug/alcohol tests).</li>
+                                <li><strong>Disqualification:</strong> Officials have discretion to disqualify horses for interference or other infractions.</li>
+                                <li><strong>Written Order:</strong> All disciplinary actions must be provided in a written order detailing the violation, basis, action taken, and effective date.</li>
+                                <li><strong>Reporting:</strong> Officials file daily and final reports with the commission.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">V. Appeals Process (Overview for Context)</h4>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Right to Review:</strong> A disciplined party can request a review by the commission within 72 hours.</li>
+                                <li><strong>Stay of Action:</strong> Filing a request does not automatically stay the decision.</li>
+                                <li><strong>Commission Review:</strong> The commission conducts its review within 45 days.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-sm text-gray-500 mt-8 py-4">
+            <p>Virginia Racing Commission | Official Guidance Document</p>
+            <p>&copy; Commonwealth of Virginia. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Alpine.js for interactivity -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</body>
+</html>
