@@ -1,266 +1,359 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VRC Steward & Judge Operational Guide</title>
+    <title>Commonwealth Connector</title>
+    
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
+        /* Apply the Inter font family */
         body {
             font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        /* Custom styles for flowchart */
-        .flowchart-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        
+        /* Simple focus style for accessibility */
+        :focus-visible {
+            outline: 2px solid #2563eb;
+            outline-offset: 2px;
+            border-radius: 6px;
         }
-        .flowchart-step {
-            background-color: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            position: relative;
-        }
-        .flowchart-arrow {
-            width: 2px;
-            height: 2rem;
-            background-color: #d1d5db;
-            margin: -1.5rem 0;
-        }
-        .flowchart-step h3 {
-            color: #003366;
-        }
-        .mckinsey-blue { color: #005f9e; }
-        .mckinsey-gray { color: #4a4a4a; }
-        .mckinsey-bg-light { background-color: #f3f4f6; }
-        .mckinsey-border { border-color: #005f9e; }
     </style>
 </head>
-<body class="mckinsey-bg-light text-mckinsey-gray">
+<body class="bg-white text-gray-900">
 
-    <div class="container mx-auto p-4 sm:p-6 md:p-8">
-        <!-- Header -->
-        <header class="bg-white p-6 rounded-lg shadow-md mb-8 border-l-8 mckinsey-border">
-            <h1 class="text-3xl md:text-4xl font-bold mckinsey-blue">Virginia Racing Commission</h1>
-            <p class="text-xl text-gray-600 mt-1">Operational Guide for Stewards & Judges</p>
-            <p class="text-sm text-gray-500 mt-2">Ensuring Integrity, Fairness, and Safety in Virginia Horse Racing</p>
-        </header>
+    <!-- COV Branding Bar -->
+    <script src="https://www.developer.virginia.gov/media/developer/resources/branding-bar/brandingbar.js" data-item="va_aabrandingbar" data-aaname="The Commonwealth Connector (Created for CLA Group 5)" data-aatheme="aatheme-white" defer="" ></script>
 
-        <!-- Section: Responsibilities of VRC Stewards and Judges -->
-        <section id="responsibilities" class="bg-white p-6 rounded-lg shadow-md mb-8">
-            <h2 class="text-2xl font-bold mckinsey-blue border-b pb-2 mb-6">Core Responsibilities of VRC Stewards & Judges</h2>
-            <p class="mb-6">The Stewards are central to the daily operation and oversight of horse racing, possessing broad authority to supervise, control, and regulate all aspects of racing and satellite facilities. Their duties are multifaceted, ensuring compliance and fairness across the board.</p>
+    <!-- Header & Navigation -->
+    <header class="border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 py-5">
+            <nav class="flex justify-between items-center">
+                <!-- Logo/Title -->
+                <div class="text-xl font-bold tracking-tight">
+                    Commonwealth <span class="text-blue-600">Connector</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#overview" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Overview</a>
+                    <a href="#how-it-works" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">How It Works</a>
+                    <a href="#toolkit" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Toolkit</a>
+                    <a href="#faqs" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">FAQs</a>
+                    <a href="#get-started" class="text-sm font-medium bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">Get Started</a>
+                </div>
+                
+                <!-- Mobile Menu Button (placeholder) -->
+                <div class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-            <!-- Responsibilities Diagram -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 text-center">
-                <div class="p-4 border rounded-lg shadow-sm">
-                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    <h3 class="font-semibold text-lg mckinsey-blue">Supervision & Authority</h3>
-                    <p class="text-sm">Oversight of race meetings, facilities, and compliance review.</p>
-                </div>
-                <div class="p-4 border rounded-lg shadow-sm">
-                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    <h3 class="font-semibold text-lg mckinsey-blue">Enforcement & Discipline</h3>
-                    <p class="text-sm">Dispute resolution, investigations, and imposing penalties.</p>
-                </div>
-                <div class="p-4 border rounded-lg shadow-sm">
-                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    <h3 class="font-semibold text-lg mckinsey-blue">Hearings & Applications</h3>
-                    <p class="text-sm">Conducting hearings, reviewing permits, and administering exams.</p>
-                </div>
-                 <div class="p-4 border rounded-lg shadow-sm">
-                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5m-2.1-19.5l-3.9 19.5m16.5-19.5l-3.9 19.5m-2.1-19.5l-3.9 19.5" /></svg>
-                    <h3 class="font-semibold text-lg mckinsey-blue">Horse & Race Management</h3>
-                    <p class="text-sm">Managing Stewards' List, eligibility, and race procedures.</p>
-                </div>
-                 <div class="p-4 border rounded-lg shadow-sm">
-                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
-                    <h3 class="font-semibold text-lg mckinsey-blue">Medical & Testing</h3>
-                    <p class="text-sm">Overseeing veterinarians, medication violations, and sample collection.</p>
-                </div>
-                 <div class="p-4 border rounded-lg shadow-sm">
-                    <svg class="w-12 h-12 mx-auto mckinsey-blue mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                    <h3 class="font-semibold text-lg mckinsey-blue">Financial & Wagering</h3>
-                    <p class="text-sm">Authorizing purse payments and overseeing wagering pools and claims.</p>
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="text-center py-24 md:py-40 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6">
+                    Commonwealth Connector
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    An initiative to strengthen collaboration, communication, and professional growth across Virginia state agencies.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#how-it-works" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-blue-700 transition-colors">
+                        Learn How It Works
+                    </a>
+                    <a href="#get-started" class="bg-gray-100 text-gray-800 px-6 py-3 rounded-lg font-medium text-lg hover:bg-gray-200 transition-colors">
+                        Request Support
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Section: Standard Operating Procedure -->
-        <section id="sop" class="bg-white p-6 rounded-lg shadow-md mb-8">
-            <h2 class="text-2xl font-bold mckinsey-blue border-b pb-2 mb-6">Standard Operating Procedure: Rule Violation & Hearing Process</h2>
-            <p class="mb-8">This SOP outlines the structured process for VRC Officials from the initial observation of a rule violation through to the final disciplinary action, ensuring due process and regulatory adherence.</p>
-            
-            <!-- Flowchart -->
-            <div class="flowchart-container">
-                <div class="flowchart-step">
-                    <h3 class="text-lg font-semibold mb-2">1. Initial Observation & Investigation</h3>
-                    <p class="text-sm">Violation observed by officials, reported, or triggered by specific events (e.g., race conduct, positive test). Information is gathered, and assistance may be requested.</p>
+        <!-- Overview / Purpose Section -->
+        <section id="overview" class="py-24 bg-gray-50 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-base font-semibold text-blue-600 tracking-wide uppercase">The Mission</h2>
+                    <p class="mt-2 text-4xl md:text-5xl font-extrabold tracking-tighter">
+                        Create a unified "One Commonwealth."
+                    </p>
                 </div>
-                <div class="flowchart-arrow"></div>
-                <div class="flowchart-step">
-                    <h3 class="text-lg font-semibold mb-2">2. Decision & Notification</h3>
-                    <p class="text-sm">Officials decide to initiate proceedings. In emergencies, a Summary Suspension may be issued. For formal hearings, written notice of charges and rights is provided to the permit holder.</p>
-                </div>
-                <div class="flowchart-arrow"></div>
-                <div class="flowchart-step">
-                    <h3 class="text-lg font-semibold mb-2">3. Hearing Conduct</h3>
-                    <p class="text-sm">The Senior Commonwealth Steward presides. Witnesses are sworn in, and the permit holder has the right to counsel, present a defense, and cross-examine witnesses. Proceedings are recorded.</p>
-                </div>
-                <div class="flowchart-arrow"></div>
-                <div class="flowchart-step">
-                    <h3 class="text-lg font-semibold mb-2">4. Post-Hearing Decision & Action</h3>
-                    <p class="text-sm">Officials determine if a violation occurred. Disciplinary actions (e.g., reprimand, fine, suspension) are determined and issued via a formal written order.</p>
-                </div>
-                <div class="flowchart-arrow"></div>
-                <div class="flowchart-step">
-                    <h3 class="text-lg font-semibold mb-2">5. Reporting & Appeals</h3>
-                    <p class="text-sm">A daily report is filed with the Commission. The disciplined party has the right to request a review of the decision by the Commission within a specified timeframe.</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section: Detailed Duties & SOPs (Collapsible) -->
-        <section id="details" class="bg-white p-6 rounded-lg shadow-md mb-8">
-            <h2 class="text-2xl font-bold mckinsey-blue border-b pb-2 mb-6">Detailed Reference Materials</h2>
-            <div x-data="{ open: null }">
-                <!-- Collapsible for Detailed Responsibilities -->
-                <div class="border rounded-md mb-4">
-                    <button @click="open = open === 1 ? null : 1" class="w-full text-left p-4 font-semibold text-lg mckinsey-blue flex justify-between items-center">
-                        <span>Detailed Responsibilities of VRC Stewards and Judges</span>
-                        <svg class="w-6 h-6 transform transition-transform" :class="{'rotate-180': open === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div x-show="open === 1" x-cloak class="p-4 border-t text-sm space-y-4">
-                        <div>
-                            <h4 class="font-bold mb-2">I. General Authority and Supervision:</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Overall Oversight:</strong> Exercise immediate supervision, control, and regulation of horse racing.</li>
-                                <li><strong>Compliance Review:</strong> Review conduct of all personnel and patrons for compliance.</li>
-                                <li><strong>Interpretation of Regulations:</strong> Interpret regulations and decide on unspecified racing questions.</li>
-                                <li><strong>Presence at Meetings:</strong> Be present 90 minutes before the first race until 15 minutes after the last is "official."</li>
-                                <li><strong>Facility Inspections:</strong> Conduct periodic inspections of enclosures.</li>
-                                <li><strong>Reporting:</strong> File daily written reports and a summary report at the end of the meeting.</li>
-                            </ul>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Pillar 1: Enhance Collaboration -->
+                    <div class="text-center md:text-left">
+                        <div class="flex justify-center md:justify-start">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-1.657-1.343-3-3-3H7m10 0a3 3 0 00-3-3H7a3 3 0 00-3 3v2m6-13h1a2 2 0 012 2v1m-4 0V5a2 2 0 012-2h1m5 0v1a2 2 0 002 2h1M5 5v1a2 2 0 01-2 2H2m3 0V5a2 2 0 01-2-2H2"></path></svg>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-bold mb-2">II. Rule Enforcement and Disciplinary Action:</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Dispute Resolution:</strong> Determine all disputes, protests, and objections.</li>
-                                <li><strong>Investigation Initiation:</strong> Initiate investigations into possible violations.</li>
-                                <li><strong>Imposing Penalties:</strong> Take disciplinary action including fines, suspensions, and revocations.</li>
-                                <li><strong>Summary Suspension:</strong> Can summarily suspend a permit for up to 90 days in emergencies.</li>
-                            </ul>
+                        <h3 class="text-2xl font-semibold mt-6 mb-3">Enhance Collaboration</h3>
+                        <p class="text-gray-600">
+                            Build an active network of professionals who can share resources and best practices across agency lines.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2: Improve Performance -->
+                    <div class="text-center md:text-left">
+                        <div class="flex justify-center md:justify-start">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-bold mb-2">III. Hearings and Applications:</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Conducting Hearings:</strong> Conduct hearings on all racing matters.</li>
-                                <li><strong>Subpoena Power:</strong> Issue subpoenas to compel witness attendance and production of records.</li>
-                                <li><strong>Permit Applications:</strong> Review, grant, or deny permits.</li>
-                                <li><strong>Examinations:</strong> Administer qualification exams for trainers, jockeys, etc.</li>
-                            </ul>
+                        <h3 class="text-2xl font-semibold mt-6 mb-3">Improve Agency Performance</h3>
+                        <p class="text-gray-600">
+                            Drive innovation and efficiency by embedding subject-matter experts and fresh perspectives where they're needed most.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3: Broaden Understanding -->
+                    <div class="text-center md:text-left">
+                        <div class="flex justify-center md:justify-start">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-bold mb-2">IV. Horse and Race Management:</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Stewards' List:</strong> Maintain a list of ineligible horses.</li>
-                                <li><strong>Horse Identification & Eligibility:</strong> Determine horse identity and race eligibility.</li>
-                                <li><strong>Entry and Post Position:</strong> Supervise entries and post position draws.</li>
-                                <li><strong>Race Conditions:</strong> Approve and manage race conditions and declarations.</li>
-                                <li><strong>Paddock & Starting Procedures:</strong> Oversee all procedures from paddock to fair start.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-2">V. Medical and Testing Oversight:</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Veterinarian Authority:</strong> Oversee veterinarians practicing under the Commission.</li>
-                                <li><strong>Medication Violations:</strong> Apply RCI guidelines and penalties for medication violations.</li>
-                                <li><strong>Test Sample Collection:</strong> Order the taking of test samples from any horse.</li>
-                                <li><strong>Human Drug Testing:</strong> Direct human drug and alcohol testing based on reasonable suspicion.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-2">VI. Financial and Wagering Oversight:</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Purse Payments:</strong> Authorize payment of purse money.</li>
-                                <li><strong>Claims:</strong> Supervise the determination of title for claimed horses.</li>
-                                <li><strong>Wagering Pools:</strong> Approve policies and changes to wagering pools.</li>
-                            </ul>
-                        </div>
+                        <h3 class="text-2xl font-semibold mt-6 mb-3">Broaden Employee Understanding</h3>
+                        <p class="text-gray-600">
+                            Offer immersive experiences that give employees a holistic view of state operations, fostering growth and creating well-rounded public servants.
+                        </p>
                     </div>
                 </div>
-
-                <!-- Collapsible for Detailed SOP -->
-                <div class="border rounded-md mb-4">
-                    <button @click="open = open === 2 ? null : 2" class="w-full text-left p-4 font-semibold text-lg mckinsey-blue flex justify-between items-center">
-                        <span>Detailed Standard Operating Procedure</span>
-                        <svg class="w-6 h-6 transform transition-transform" :class="{'rotate-180': open === 2}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div x-show="open === 2" x-cloak class="p-4 border-t text-sm space-y-4">
-                        <div>
-                            <h4 class="font-bold mb-2">I. Initial Observation and Investigation (Pre-Hearing)</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Observation of Violation:</strong> VRC Officials have immediate supervision and may initiate investigations based on their own observations.</li>
-                                <li><strong>Specific Triggers for Investigation:</strong> Includes horse performance, identification issues, injuries, fair start problems, improper race conduct, weight discrepancies, permit holder misconduct, substance testing issues, claiming violations, and wagering irregularities.</li>
-                                <li><strong>Gathering Information:</strong> Officials may request assistance, issue subpoenas, and require veterinarian reports or chemist statements.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-2">II. Decision to Conduct a Hearing & Notification</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Initiating Proceedings:</strong> Officials can institute proceedings based on their observations.</li>
-                                <li><strong>Summary Suspension (Emergency Action):</strong> A permit can be suspended for up to 90 days if emergency action is required, with a hearing scheduled within 14 business days.</li>
-                                <li><strong>Formal Hearing Notification:</strong> Written notice of charges, basis, possible penalties, and rights (to counsel, present a defense, cross-examine) must be given to the permit holder.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-2">III. Conducting the Hearing</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Presiding Officer:</strong> The Senior Commonwealth VRC Official presides.</li>
-                                <li><strong>Procedural Rights:</strong> Oaths are administered, witnesses can be examined, the permit holder has defense rights, continuances can be granted, and proceedings are recorded.</li>
-                                <li><strong>Addressing Objections and Protests:</strong> Officials hear all objections and protests, which must be filed according to specific procedures. Purse money is retained until a final determination.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-2">IV. Post-Hearing: Decision and Disciplinary Action</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Determination of Violations:</strong> Officials review all evidence to determine if a violation occurred.</li>
-                                <li><strong>Disciplinary Actions:</strong> Penalties can include reprimand, fine, forfeiture of purse, probation, suspension, revocation, or exclusion. Specific penalties exist for certain violations (e.g., furosemide, human drug/alcohol tests).</li>
-                                <li><strong>Disqualification:</strong> Officials have discretion to disqualify horses for interference or other infractions.</li>
-                                <li><strong>Written Order:</strong> All disciplinary actions must be provided in a written order detailing the violation, basis, action taken, and effective date.</li>
-                                <li><strong>Reporting:</strong> Officials file daily and final reports with the commission.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-2">V. Appeals Process (Overview for Context)</h4>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Right to Review:</strong> A disciplined party can request a review by the commission within 72 hours.</li>
-                                <li><strong>Stay of Action:</strong> Filing a request does not automatically stay the decision.</li>
-                                <li><strong>Commission Review:</strong> The commission conducts its review within 45 days.</li>
-                            </ul>
-                        </div>
+            </div>
+        </section>
+        
+        <!-- How It Works / Tiers Section -->
+        <section id="how-it-works" class="py-24 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter">
+                        A Scalable Framework
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Based on agency feedback, we are focused on flexible, high-impact engagements. While long-term exchanges are a goal, our primary focus is on short-term consultations and projects in high-demand areas like IT, HR, Finance, and Procurement.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Tier 1: Shadowing -->
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                        <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">TIER 1</span>
+                        <h3 class="text-3xl font-semibold mb-3">Shadowing</h3>
+                        <p class="text-gray-600">
+                            A short-term, observational experience. Staff visit a peer agency to gain insight without disrupting daily operations.
+                        </p>
+                    </div>
+                    
+                    <!-- Tier 2: Consulting & Projects -->
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                        <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">TIER 2</span>
+                        <h3 class="text-3xl font-semibold mb-3">Consulting & Projects</h3>
+                        <p class="text-gray-600">
+                            Time-limited deployment of a Subject Matter Expert (SME) to solve a defined problem, consult on an RFP, or assist with a specific project. Engagements can range from a few days to several weeks, part-time or full-time.
+                        </p>
+                    </div>
+                    
+                    <!-- Tier 3: Strategic Exchange -->
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                        <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">TIER 3</span>
+                        <h3 class="text-3xl font-semibold mb-3">Strategic Exchange</h3>
+                        <p class="text-gray-600">
+                            A high-impact, full-time placement (e.g., 3-6 months) to lead a transformation or transfer institutional knowledge. This tier requires detailed planning and agency head approval.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="text-center text-sm text-gray-500 mt-8 py-4">
-            <p>Virginia Racing Commission | Official Guidance Document</p>
-            <p>&copy; Commonwealth of Virginia. All Rights Reserved.</p>
-        </footer>
-    </div>
+        <!-- Program in Action: Use Cases -->
+        <section id="use-cases" class="py-24 bg-gray-50 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter">
+                        Program in Action
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Real-world scenarios based on common agency needs.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Example 1: IT Consulting -->
+                    <div class="bg-white rounded-2xl p-8 border border-gray-200">
+                        <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">IT CONSULTING (TIER 2)</span>
+                        <h3 class="text-2xl font-semibold mb-3">Cloud RFP Scoping</h3>
+                        <p class="text-gray-600">
+                            An IT cloud architect from VITA consults with the Dept. of Energy for one week to help their team define requirements and scope a complex cloud services RFP.
+                        </p>
+                    </div>
+                    
+                    <!-- Example 2: Shadowing -->
+                    <div class="bg-white rounded-2xl p-8 border border-gray-200">
+                        <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">SHADOWING (TIER 1)</span>
+                        <h3 class="text-2xl font-semibold mb-3">Finance Onboarding</h3>
+                        <p class="text-gray-600">
+                            A new finance employee from the Dept. of Veterans Services shadows a VDOT procurement officer for two days to observe the end-to-end procurement process in a large agency.
+                        </p>
+                    </div>
+                    
+                    <!-- Example 3: Project Loan -->
+                    <div class="bg-green-100 text-green-700 rounded-2xl p-8 border border-green-200">
+                        <span class="inline-block bg-green-200 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">PROJECT LOAN (TIER 2/3)</span>
+                        <h3 class="text-2xl font-semibold mb-3">Critical PM Support</h3>
+                        <p class="text-gray-700">
+                            A certified Project Manager from VEC is assigned full-time for 3 months to DBHDS to help manage a critical system rollout, filling a temporary vacancy and ensuring the project meets its deadline.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Alpine.js for interactivity -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <!-- Toolkit Section -->
+        <section id="toolkit" class="py-24 bg-gray-900 text-white px-6">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter">
+                        A Toolkit for Success.
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-300">
+                        We provide a comprehensive set of resources for a smooth, consistent, and effective program from start to finish.
+                    </p>
+                </div>
+                <div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-lg text-gray-100">Memorandum of Agreement (MOA) Templates</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-lg text-gray-100">Program Brochures & One-Pagers</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-lg text-gray-100">Volunteer & Agency Request Forms</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-lg text-gray-100">Participant & Agency Expectation Checklists</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-lg text-gray-100">Post-Exchange Feedback Forms</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-lg text-gray-100">Dedicated Webpage & Teams Channel</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQs / Addressing Concerns Section -->
+        <section id="faqs" class="py-24 px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter">
+                        Addressing Key Questions
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Transparency is a core part of our process. Here's how we're addressing common concerns.
+                    </p>
+                </div>
+                
+                <div class="space-y-10">
+                    <!-- FAQ 1 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">
+                            My agency is already understaffed. How can we afford to lend anyone out?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            We recognize this is the #1 challenge. The tiered system is designed for this exact reason. We've found most agencies prefer short-term, high-flexibility options.
+                            <br><br>
+                            Instead of a long-term "loan," consider a <strong class="font-semibold text-gray-700">Tier 2 Consultation</strong>: lending your expert for just a few days or even part-time for a specific project. Tier 1 (Shadowing) is also a low-disruption way to participate. Tier 3 is an admirable goal, not the expected starting point.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">
+                            What about employees funded by different sources (non-general fund, grant-funded, etc.)?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            This is a critical detail. The Memorandum of Agreement (MOA) between agencies is the key tool to solve this. The MOA will explicitly define the conditions of the engagement, including any cost-sharing and considerations for the employee's specific funding source (e.g., grant requirements) to ensure full compliance.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">
+                            How do we prevent "dual workload," where an employee feels they have to do two jobs at once?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            This is a major failure point of past informal efforts, and a core problem the Connector is designed to solve. The MOA and Expectation Checklists are mandatory and must be signed by all parties *before* the engagement begins.
+                            <br><br>
+                            These documents will explicitly state whether the engagement is <strong class="font-semibold text-gray-700">full-time</strong> (home agency duties are fully backfilled) or <strong class="font-semibold text-gray-700">part-time</strong> (e.g., 10 hours/week) with clear, agreed-upon deliverables. This protects the employee, the sending agency, and the receiving agency.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">
+                            What about logistical hurdles like VITA access, IT permissions, and building access?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            These logistical issues are precisely why longer-term exchanges (Tier 3) require significant planning. However, for shorter Tier 1 and Tier 2 engagements, access is often simpler.
+                            <br><br>
+                            For example, a "Shadowing" employee may only need a guest badge. A "Consulting" expert may be able to provide all deliverables using their own equipment and email, without needing deep access to the host's network. The MOA will define what access is required and the timeline for provisioning it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="get-started" class="py-24 bg-blue-600 text-white px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter">
+                    Ready to Connect?
+                </h2>
+                <p class="mt-4 text-lg text-blue-100 max-w-2xl mx-auto">
+                    Whether you have an expert to share or a challenge to solve, the Commonwealth Connector is your new resource for cross-agency success.
+                </p>
+                <a href="#" class="mt-10 inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-medium text-lg hover:bg-gray-100 transition-colors">
+                    Start an Engagement
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 py-12 text-center">
+            <p class="text-sm text-gray-500">
+                An initiative by the Commonwealth Leadership Academy.
+            </p>
+            <p class="text-sm text-gray-500 mt-1">
+                &copy; 2025 Commonwealth of Virginia. All rights reserved.
+            </WELCOME>
+        </div>
+    </footer>
+
 </body>
 </html>
